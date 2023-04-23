@@ -2,15 +2,15 @@ from paho.mqtt import client as mqtt
 from random import randint
 
 port = 1883
-broker = "192.168.3.11"
+broker = "localhost"
 
 player = "player-name"
 score = randint(1,100)
 
-client = mqtt.Client("Lucas")
-client.username_pw_set(username="lucas", password="rohlin")
+client = mqtt.Client()
+client.username_pw_set(username="", password="")
 client.connect(broker, port)
 
-client.publish("test", "{}: {}".format(player, score))
+client.publish("topic", "{}: {}".format(player, score))
 
 client.disconnect()
