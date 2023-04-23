@@ -2,5 +2,5 @@
 
 install library: 
 ```
-$ pip install flask
+$ pip install paho-mqtt
 ```
