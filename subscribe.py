@@ -1,7 +1,7 @@
 from paho.mqtt import client as mqtt
 
 def on_message(client, userdata, message):
-    print("Received message:", str(message.payload.decode("shift-jis")))
+    print("Received message:", str(message.payload.decode("utf-8")))
 
 broker = "localhost"    
 port = 1883
